@@ -2,10 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Models;
 
 namespace Data;
-public class AppContext : DbContext
+public class ApplicationContext : DbContext
 {
-    DbSet<Card> Cards { get; set; }
-    public AppContext(DbContextOptions<AppContext> options): base(options)
+    public DbSet<Card> Cards { get; set; }
+    public ApplicationContext(DbContextOptions<ApplicationContext> options): base(options)
 	{
         Database.EnsureCreated();
     }
