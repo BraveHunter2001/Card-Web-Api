@@ -5,10 +5,7 @@ namespace Data;
 public class ApplicationContext : DbContext
 {
     public DbSet<Card> Cards { get; set; }
-    public ApplicationContext(DbContextOptions<ApplicationContext> options): base(options)
-	{
-        Database.EnsureCreated();
-    }
+    public ApplicationContext(DbContextOptions<ApplicationContext> options): base(options){}
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
